@@ -1,4 +1,5 @@
-#include "evaluator/evaluator.hpp"
+#include "evaluator/cevaluator.hpp"
+#include "evaluator/csquares.hpp"
 
 int main() {
     return 0;

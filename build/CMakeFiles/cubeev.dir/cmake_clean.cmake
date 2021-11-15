@@ -1,4 +1,8 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o"
+  "CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o.d"
+  "CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o"
+  "CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o.d"
   "CMakeFiles/cubeev.dir/main.cpp.o"
   "CMakeFiles/cubeev.dir/main.cpp.o.d"
   "cubeev"

@@ -129,6 +129,54 @@ cubeev/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/build
 .PHONY : cubeev/fast
 
+evaluator/cevaluator.o: evaluator/cevaluator.cpp.o
+.PHONY : evaluator/cevaluator.o
+
+# target to build an object file
+evaluator/cevaluator.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o
+.PHONY : evaluator/cevaluator.cpp.o
+
+evaluator/cevaluator.i: evaluator/cevaluator.cpp.i
+.PHONY : evaluator/cevaluator.i
+
+# target to preprocess a source file
+evaluator/cevaluator.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i
+.PHONY : evaluator/cevaluator.cpp.i
+
+evaluator/cevaluator.s: evaluator/cevaluator.cpp.s
+.PHONY : evaluator/cevaluator.s
+
+# target to generate assembly for a file
+evaluator/cevaluator.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s
+.PHONY : evaluator/cevaluator.cpp.s
+
+evaluator/csquares.o: evaluator/csquares.cpp.o
+.PHONY : evaluator/csquares.o
+
+# target to build an object file
+evaluator/csquares.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o
+.PHONY : evaluator/csquares.cpp.o
+
+evaluator/csquares.i: evaluator/csquares.cpp.i
+.PHONY : evaluator/csquares.i
+
+# target to preprocess a source file
+evaluator/csquares.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i
+.PHONY : evaluator/csquares.cpp.i
+
+evaluator/csquares.s: evaluator/csquares.cpp.s
+.PHONY : evaluator/csquares.s
+
+# target to generate assembly for a file
+evaluator/csquares.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cubeev.dir/build.make CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s
+.PHONY : evaluator/csquares.cpp.s
+
 main.o: main.cpp.o
 .PHONY : main.o
 
@@ -162,6 +210,12 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... cubeev"
+	@echo "... evaluator/cevaluator.o"
+	@echo "... evaluator/cevaluator.i"
+	@echo "... evaluator/cevaluator.s"
+	@echo "... evaluator/csquares.o"
+	@echo "... evaluator/csquares.i"
+	@echo "... evaluator/csquares.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
