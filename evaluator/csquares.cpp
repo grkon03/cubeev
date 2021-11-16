@@ -34,3 +34,7 @@ bool CSQUARES::move(int s2, int s3) {
 int CSQUARES::player_corrent_turn() {
     return (turn % 2 + 1);
 }
+
+int CSQUARES::get_turn() {
+    return turn;
+}
