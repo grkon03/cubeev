@@ -42,7 +42,7 @@ class CSQUARES {
     no argument
     return the value
     */
-   int get_turn();
+    int get_turn();
     /*
     make a move:
     put a proper player's ball in squares[now height + 1][first argument][second argument]
