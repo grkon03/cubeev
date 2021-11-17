@@ -41,7 +41,7 @@ template <typename T> bool data_init(int id,  bool _delete) {
     int def = datadefault_byID<T>(id);
     if (_delete || !exist) {
         for (int i = 0; i < datasize_byID(id); i++) {
-            ofs.write(def, sizeof(T))
+            ofs.write((char *) &def, sizeof(T));
         }
     }
     if (_delete || exist) {
