@@ -17,18 +17,19 @@ About :
 #define LINE_DAT_SIZE 76 // size of line.dat
 #define LINE_DAT_FILE "data/line.dat" // file name of line.dat
 #define LINE_DAT_DEFAULT 3 // default value of line.dat
+#define LINE_DAT_TYPE double // data type of line.dat
 
 /*
 translator from ID to constant
 argument is {dataname}_DAT_ID
 dataname:
     - LINE
-return {dataname}'s size/file name/default value
+return {dataname}'s size/file name/default value/data type
 */
 
 int datasize_byID(int);
 std::string datafile_byID(int);
-int datadefault_byID(int);
+template <typename T> T datadefault_byID(int);
 
 /*
 initialize data of AI:
@@ -40,4 +41,4 @@ behavior depending on third argument
     - false : if the path don't exist, create new file and data,
               return true if the path exists, or false if else
 */
-bool data_init(int, bool);
+template <typename T> bool data_init(int, bool);
