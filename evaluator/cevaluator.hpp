@@ -40,4 +40,4 @@ behavior depending on third argument
     - false : if the path don't exist, create new file and data,
               return true if the path exists, or false if else
 */
-bool data_init(std::string, int, bool);
+bool data_init(int, bool);
