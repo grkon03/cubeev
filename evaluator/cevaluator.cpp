@@ -2,7 +2,32 @@
 
 using namespace std;
 
-bool data_init(std::string file, bool _delete) {
+int datasize_byID(int id) {
+    switch(id) {
+        case LINE_DAT_ID:
+        return LINE_DAT_SIZE;
+    }
+    return 0;
+}
+
+string datafile_byID(int id) {
+    switch(id) {
+        case LINE_DAT_ID:
+        return LINE_DAT_FILE;
+    }
+    return "";
+}
+
+int datadefault_byID(int id) {
+    switch(id) {
+        case LINE_DAT_ID:
+        return LINE_DAT_DEFAULT;
+    }
+    return 0;
+}
+
+bool data_init(int id,  bool _delete) {
+    string file = datafile_byID(id);
     ifstream ifs(file);
     bool exist = ifs.is_open();
 
@@ -12,9 +37,11 @@ bool data_init(std::string file, bool _delete) {
         mode = mode | ios_base::trunc;
     }
     ofs.open(file, mode);
+
+    int def = datadefault_byID(id);
     if (_delete || !exist) {
-        for (int i = 0; i < LINE_DAT_SIZE; i++) {
-            ofs << to_string(LINE_DAT_DEFAULT);
+        for (int i = 0; i < datasize_byID(id); i++) {
+            ofs << to_string(def);
         }
     }
     if (_delete || exist) {
