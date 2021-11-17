@@ -3,7 +3,7 @@
 /*
 "csquares.hpp" created by grkon(Twitter: @progblog_note)
 About :
-    Game manager for the 3 dimensions yonmoku in a board of 4 * 4 * 4 squares.
+    Game manager for the 3 dimensions 4 in A Row in a board of 4 * 4 * 4 squares.
     Usage is commented out.
 */
 

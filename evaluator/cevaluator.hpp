@@ -3,7 +3,7 @@
 /*
 "cevaluator.hpp" created by grkon(Twitter: @progblog_note)
 About :
-    Evaluation calculator for the 3 dimensions yonmoku in a board of 4 * 4 * 4 squares.
+    Evaluation calculator for the 3 dimensions 4 in A Row in a board of 4 * 4 * 4 squares.
     Usage is commented out.
 */
 
@@ -17,7 +17,9 @@ About :
 #define LINE_DAT_SIZE 76 // size of line.dat
 #define LINE_DAT_FILE "data/line.dat" // file name of line.dat
 #define LINE_DAT_DEFAULT 3 // default value of line.dat
-#define LINE_DAT_TYPE double // data type of line.dat
+typedef double LINE_DAT_TYPE; // data type of line.dat
+
+//// data handler
 
 /*
 translator from ID to constant
@@ -62,3 +64,14 @@ return true if success, or false if else
 typename is type of value
 */
 template <typename T> bool data_put(int, T []);
+
+//// evaluator
+
+class CEVALUATOR {
+    private:
+    //variable
+
+    LINE_DAT_TYPE line_data[LINE_DAT_SIZE]; // line evaluation data
+
+    int bestmove[64]; // best move container
+};
