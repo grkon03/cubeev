@@ -55,11 +55,24 @@ template <typename T> bool data_get(int id, T *data) {
     if (!ifs) {
         return false;
     }
-    
+
     int dsize = datasize_byID(id);
-    data = new T[dsize)];
+    data = new T[dsize];
     for (int i = 0; i < dsize; i++) {
         ifs.read((char *) &data[i], sizeof(T));
+    }
+    return true;
+}
+
+template <typename T> bool data_put(int id, T data[]) {
+    ofstream ofs(datafile_byID(id));
+    if (!ofs) {
+        return false;
+    }
+    
+    int dsize = datasize_byID(id);
+    for (int i = 0; i < dsize; i++) {
+        ofs.write((char *) &data[i], sizeof(T));
     }
     return true;
 }

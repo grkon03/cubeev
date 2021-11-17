@@ -53,3 +53,12 @@ return true if success, or false if else
 typename is type of value
 */
 template <typename T> bool data_get(int, T *);
+
+/*
+put data of AI:
+first argument is id of data file
+second argument is the array of data
+return true if success, or false if else
+typename is type of value
+*/
+template <typename T> bool data_put(int, T []);
