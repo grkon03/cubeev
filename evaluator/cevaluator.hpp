@@ -33,12 +33,23 @@ template <typename T> T datadefault_byID(int);
 
 /*
 initialize data of AI:
-first argument is a path of file
+first argument is id of data file
 second argument is the size of data
 behavior depending on third argument
-    - true  : delete data in the file in the path and create new data,
+    - true  : delete data in the file and create new data,
               return true
-    - false : if the path don't exist, create new file and data,
+    - false : if the file don't exist, create new file and data,
               return true if the path exists, or false if else
+typename is type of value
 */
 template <typename T> bool data_init(int, bool);
+
+/*
+get data of AI:
+first argument is id of data file
+second argument is the pointer of data container
+    (*) you must put the pointer, not array
+return true if success, or false if else
+typename is type of value
+*/
+template <typename T> bool data_get(int, T *);

@@ -49,3 +49,17 @@ template <typename T> bool data_init(int id,  bool _delete) {
     }
     return false;
 }
+
+template <typename T> bool data_get(int id, T *data) {
+    ifstream ifs(datafile_byID(id), ios::binary);
+    if (!ifs) {
+        return false;
+    }
+    
+    int dsize = datasize_byID(id);
+    data = new T[dsize)];
+    for (int i = 0; i < dsize; i++) {
+        ifs.read((char *) &data[i], sizeof(T));
+    }
+    return true;
+}
