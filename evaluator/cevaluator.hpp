@@ -76,11 +76,21 @@ class CEVALUATOR {
     */
     LINE_DAT_TYPE line_data[LINE_DAT_SIZE];
 
+
     /*
-    best move container
+    board which is analayzed latter
+    */
+    CSQUARES now_analyzed_squares;
+
+    /*
+    best move of "now_analyzed_squares"
     In the unanalyzed index, the variable is assigned -1
     */
     int bestmove[64];
+    /*
+    evaluation of "now_analyzed_squares"
+    */
+    int now_evaluation;
 
     public:
     // constructor

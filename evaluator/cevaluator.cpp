@@ -81,7 +81,7 @@ template <typename T> bool data_put(int id, T data[]) {
 
 // evaluator
 
-CEVALUATOR::CEVALUATOR() {
+CEVALUATOR::CEVALUATOR() : now_evaluation(0) {
     for (int i = 0; i < LINE_DAT_SIZE; i++) {
         line_data[i] = LINE_DAT_DEFAULT;
     }
@@ -91,7 +91,7 @@ CEVALUATOR::CEVALUATOR() {
     }
 }
 
-CEVALUATOR::CEVALUATOR(LINE_DAT_TYPE _line[LINE_DAT_SIZE]) {
+CEVALUATOR::CEVALUATOR(LINE_DAT_TYPE _line[LINE_DAT_SIZE]) : now_evaluation(0) {
     for (int i = 0; i < LINE_DAT_SIZE; i++) {
         line_data[i] = _line[i];
     }
