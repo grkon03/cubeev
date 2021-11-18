@@ -7,6 +7,14 @@ About :
     Usage is commented out.
 */
 
+/*
+CSQUARES
+caution:
+    - player number
+        - first player  : 1
+        - second player : 2
+        this number is used for board, turn, winner, etc...
+*/
 class CSQUARES {
     private:
     // variables
@@ -52,7 +60,13 @@ class CSQUARES {
     /*
     get the player of current turn:
     no argument
-    return the player
+    return current turn number
     */
     int player_corrent_turn();
+    /*
+    judge winner:
+    no argument
+    return winner number if either win, or 0 if else
+    */
+    int judge_winner();
 };
