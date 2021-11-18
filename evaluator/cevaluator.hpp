@@ -97,4 +97,14 @@ class CEVALUATOR {
 
     CEVALUATOR(); // no data set (using default value)
     CEVALUATOR(LINE_DAT_TYPE [LINE_DAT_SIZE]); // use data set
+
+    public:
+    // functions
+
+    /*
+    calculate temporary evaluation:
+    calculate temporary evaluation of board of first argument
+    return evaluation
+    */
+    double temporary_evaluator(CSQUARES);
 };

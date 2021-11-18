@@ -100,3 +100,319 @@ CEVALUATOR::CEVALUATOR(LINE_DAT_TYPE _line[LINE_DAT_SIZE]) : now_evaluation(0) {
         bestmove[i] = -1;
     }
 }
+
+double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
+    switch(cs.judge_winner()) {
+        case 1:
+        return 10000;
+        case 2:
+        return -10000;
+    }
+    
+    int evaluation = 0;
+    int z, numofball;
+    int index = 0;
+    int s[4][4][4];
+    bool skip;
+    cs.get_squares(s);
+
+    for (int s23 = 0; s23 < 16; s23++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s1 = 0; s1 < 4; s1++) {
+            if (z == 0 && s[s1][(int)(s23 / 4)][s23 % 4] != 0) {
+                z = s[s1][(int)(s23 / 4)][s23 % 4];
+                numofball++;
+            } else if (z != s[s1][(int)(s23 / 4)][s23 % 4]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    for (int s31 = 0; s31 < 16; s31++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s2 = 0; s2 < 4; s2++) {
+            if (z == 0 && s[(int)(s31 / 4)][s2][s31 % 4] != 0) {
+                z = s[(int)(s31 / 4)][s2][s31 % 4];
+                numofball++;
+            } else if (z != s[(int)(s31 / 4)][s2][s31 % 4]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    for (int s12 = 0; s12 < 16; s12++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s3 = 0; s3 < 4; s3++) {
+            if (z == 0 && s[(int)(s12 / 4)][s12 % 4][s3] != 0) {
+                z = s[(int)(s12 / 4)][s12 % 4][s3];
+                numofball++;
+            } else if (z != s[(int)(s12 / 4)][s12 % 4][s3]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    for (int s3 = 0; s3 < 4; s3++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s1 = 0; s1 < 4; s1++) {
+            if (z == 0 && s[s1][s1][s3] != 0) {
+                z = s[s1][s1][s3];
+                numofball++;
+            } else if (z != s[s1][s1][s3]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s1 = 0; s1 < 4; s1++) {
+            if (z == 0 && s[s1][3 - s1][s3] != 0) {
+                z = s[s1][3 - s1][s3];
+                numofball++;
+            } else if (z != s[s1][3 - s1][s3]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    for (int s1 = 0; s1 < 4; s1++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s2 = 0; s2 < 4; s2++) {
+            if (z == 0 && s[s1][s2][s2] != 0) {
+                z = s[s1][s2][s2];
+                numofball++;
+            } else if (z != s[s1][s2][s2]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s2 = 0; s2 < 4; s2++) {
+            if (z == 0 && s[s1][s2][3 - s2] != 0) {
+                z = s[s1][s2][3 - s2];
+                numofball++;
+            } else if (z != s[s1][s2][3 - s2]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    for (int s2 = 0; s2 < 4; s2++) {
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s3 = 0; s3 < 4; s3++) {
+            if (z == 0 && s[s3][s2][s3] != 0) {
+                z = s[s3][s2][s3];
+                numofball++;
+            } else if (z != s[s3][s2][s3]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+        z = 0;
+        numofball = 0;
+        skip = false;
+        for (int s3 = 0; s3 < 4; s3++) {
+            if (z == 0 && s[s3][s2][3 - s3] != 0) {
+                z = s[s3][s2][3 - s3];
+                numofball++;
+            } else if (z != s[s3][s2][3 - s3]) {
+                skip = true;
+                break;
+            } else {
+                numofball++;
+            }
+        }
+        if (!skip) {
+            if (z == 1) {
+                evaluation += line_data[index] * numofball;
+            } else {
+                evaluation -= line_data[index] * numofball;
+            }
+        }
+        index++;
+    }
+    z = 0;
+    numofball = 0;
+    skip = false;
+    for (int s1 = 0; s1 < 4; s1++) {
+        if (z == 0 && s[s1][s1][s1] != 0) {
+            z = s[s1][s1][s1];
+            numofball++;
+        } else if (z != s[s1][s1][s1]) {
+            skip = true;
+            break;
+        } else {
+            numofball++;
+        }
+    }
+    if (!skip) {
+        if (z == 1) {
+            evaluation += line_data[index] * numofball;
+        } else {
+            evaluation -= line_data[index] * numofball;
+        }
+    }
+    index++;
+    z = 0;
+    numofball = 0;
+    skip = false;
+    for (int s1 = 0; s1 < 4; s1++) {
+        if (z == 0 && s[s1][s1][3 - s1] != 0) {
+            z = s[s1][s1][s1];
+            numofball++;
+        } else if (z != s[s1][s1][3 - s1]) {
+            skip = true;
+            break;
+        } else {
+            numofball++;
+        }
+    }
+    if (!skip) {
+        if (z == 1) {
+            evaluation += line_data[index] * numofball;
+        } else {
+            evaluation -= line_data[index] * numofball;
+        }
+    }
+    index++;
+    z = 0;
+    numofball = 0;
+    skip = false;
+    for (int s1 = 0; s1 < 4; s1++) {
+        if (z == 0 && s[s1][3 - s1][s1] != 0) {
+            z = s[s1][s1][s1];
+            numofball++;
+        } else if (z != s[s1][3 - s1][s1]) {
+            skip = true;
+            break;
+        } else {
+            numofball++;
+        }
+    }
+    if (!skip) {
+        if (z == 1) {
+            evaluation += line_data[index] * numofball;
+        } else {
+            evaluation -= line_data[index] * numofball;
+        }
+    }
+    index++;
+    z = 0;
+    numofball = 0;
+    skip = false;
+    for (int s1 = 0; s1 < 4; s1++) {
+        if (z == 0 && s[s1][3 - s1][3 - s1] != 0) {
+            z = s[s1][s1][s1];
+            numofball++;
+        } else if (z != s[s1][3 - s1][3 - s1]) {
+            skip = true;
+            break;
+        } else {
+            numofball++;
+        }
+    }
+    if (!skip) {
+        if (z == 1) {
+            evaluation += line_data[index] * numofball;
+        } else {
+            evaluation -= line_data[index] * numofball;
+        }
+    }
+
+    return evaluation;
+}
