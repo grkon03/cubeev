@@ -2,6 +2,8 @@
 
 using namespace std;
 
+/// data handler
+
 int datasize_byID(int id) {
     switch(id) {
         case LINE_DAT_ID:
@@ -75,4 +77,26 @@ template <typename T> bool data_put(int id, T data[]) {
         ofs.write((char *) &data[i], sizeof(T));
     }
     return true;
+}
+
+// evaluator
+
+CEVALUATOR::CEVALUATOR() {
+    for (int i = 0; i < LINE_DAT_SIZE; i++) {
+        line_data[i] = LINE_DAT_DEFAULT;
+    }
+
+    for (int i = 0; i < 64; i++) {
+        bestmove[i] = -1;
+    }
+}
+
+CEVALUATOR::CEVALUATOR(LINE_DAT_TYPE _line[LINE_DAT_SIZE]) {
+    for (int i = 0; i < LINE_DAT_SIZE; i++) {
+        line_data[i] = _line[i];
+    }
+
+    for (int i = 0; i < 64; i++) {
+        bestmove[i] = -1;
+    }
 }

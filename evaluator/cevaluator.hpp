@@ -71,7 +71,20 @@ class CEVALUATOR {
     private:
     //variable
 
-    LINE_DAT_TYPE line_data[LINE_DAT_SIZE]; // line evaluation data
+    /*
+    line evaluation data
+    */
+    LINE_DAT_TYPE line_data[LINE_DAT_SIZE];
 
-    int bestmove[64]; // best move container
+    /*
+    best move container
+    In the unanalyzed index, the variable is assigned -1
+    */
+    int bestmove[64];
+
+    public:
+    // constructor
+
+    CEVALUATOR(); // no data set (using default value)
+    CEVALUATOR(LINE_DAT_TYPE [LINE_DAT_SIZE]); // use data set
 };
