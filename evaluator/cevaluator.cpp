@@ -140,7 +140,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s1 = 0; s1 < 4; s1++) {
-            if (z == 0 && s[s1][(int)(s23 / 4)][s23 % 4] != 0) {
+            if (s[s1][(int)(s23 / 4)][s23 % 4] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s1][(int)(s23 / 4)][s23 % 4];
                 numofball++;
             } else if (z != s[s1][(int)(s23 / 4)][s23 % 4]) {
@@ -164,7 +166,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s2 = 0; s2 < 4; s2++) {
-            if (z == 0 && s[(int)(s31 / 4)][s2][s31 % 4] != 0) {
+            if (s[(int)(s31 / 4)][s2][s31 % 4] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[(int)(s31 / 4)][s2][s31 % 4];
                 numofball++;
             } else if (z != s[(int)(s31 / 4)][s2][s31 % 4]) {
@@ -188,7 +192,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s3 = 0; s3 < 4; s3++) {
-            if (z == 0 && s[(int)(s12 / 4)][s12 % 4][s3] != 0) {
+            if (s[(int)(s12 / 4)][s12 % 4][s3] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[(int)(s12 / 4)][s12 % 4][s3];
                 numofball++;
             } else if (z != s[(int)(s12 / 4)][s12 % 4][s3]) {
@@ -212,7 +218,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s1 = 0; s1 < 4; s1++) {
-            if (z == 0 && s[s1][s1][s3] != 0) {
+            if (s[s1][s1][s3] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s1][s1][s3];
                 numofball++;
             } else if (z != s[s1][s1][s3]) {
@@ -234,7 +242,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s1 = 0; s1 < 4; s1++) {
-            if (z == 0 && s[s1][3 - s1][s3] != 0) {
+            if (s[s1][3 - s1][s3] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s1][3 - s1][s3];
                 numofball++;
             } else if (z != s[s1][3 - s1][s3]) {
@@ -258,7 +268,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s2 = 0; s2 < 4; s2++) {
-            if (z == 0 && s[s1][s2][s2] != 0) {
+            if (s[s1][s2][s2] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s1][s2][s2];
                 numofball++;
             } else if (z != s[s1][s2][s2]) {
@@ -280,7 +292,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s2 = 0; s2 < 4; s2++) {
-            if (z == 0 && s[s1][s2][3 - s2] != 0) {
+            if (s[s1][s2][3 - s2] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s1][s2][3 - s2];
                 numofball++;
             } else if (z != s[s1][s2][3 - s2]) {
@@ -304,7 +318,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s3 = 0; s3 < 4; s3++) {
-            if (z == 0 && s[s3][s2][s3] != 0) {
+            if (s[s3][s2][s3] == 0) {
+                continue;
+            } else if (z == 0) {
                 z = s[s3][s2][s3];
                 numofball++;
             } else if (z != s[s3][s2][s3]) {
@@ -326,7 +342,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         numofball = 0;
         skip = false;
         for (int s3 = 0; s3 < 4; s3++) {
-            if (z == 0 && s[s3][s2][3 - s3] != 0) {
+            if (s[s3][s2][3 - s3] == 0) {
+
+            } else if (z == 0) {
                 z = s[s3][s2][3 - s3];
                 numofball++;
             } else if (z != s[s3][s2][3 - s3]) {
@@ -349,7 +367,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     numofball = 0;
     skip = false;
     for (int s1 = 0; s1 < 4; s1++) {
-        if (z == 0 && s[s1][s1][s1] != 0) {
+        if (s[s1][s1][s1] == 0) {
+            continue;
+        } else if (z == 0) {
             z = s[s1][s1][s1];
             numofball++;
         } else if (z != s[s1][s1][s1]) {
@@ -371,7 +391,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     numofball = 0;
     skip = false;
     for (int s1 = 0; s1 < 4; s1++) {
-        if (z == 0 && s[s1][s1][3 - s1] != 0) {
+        if (s[s1][s1][3 - s1] == 0) {
+            continue;
+        } else if (z == 0) {
             z = s[s1][s1][s1];
             numofball++;
         } else if (z != s[s1][s1][3 - s1]) {
@@ -393,7 +415,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     numofball = 0;
     skip = false;
     for (int s1 = 0; s1 < 4; s1++) {
-        if (z == 0 && s[s1][3 - s1][s1] != 0) {
+        if (s[s1][3 - s1][s1] == 0) {
+            continue;
+        } else if (z == 0) {
             z = s[s1][s1][s1];
             numofball++;
         } else if (z != s[s1][3 - s1][s1]) {
@@ -415,7 +439,9 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     numofball = 0;
     skip = false;
     for (int s1 = 0; s1 < 4; s1++) {
-        if (z == 0 && s[s1][3 - s1][3 - s1] != 0) {
+        if (s[s1][3 - s1][3 - s1] == 0) {
+            continue;
+        } else if (z == 0) {
             z = s[s1][s1][s1];
             numofball++;
         } else if (z != s[s1][3 - s1][3 - s1]) {
