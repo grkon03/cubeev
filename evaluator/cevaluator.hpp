@@ -101,10 +101,24 @@ class CEVALUATOR {
     public:
     // functions
 
+
+    private:
+    // private functions
+
     /*
     calculate temporary evaluation:
     calculate temporary evaluation of board of first argument
     return evaluation
     */
     double temporary_evaluator(CSQUARES);
+
+    /*
+    search by alpha beta prunning:
+    search board of first argument
+    second, third argument is alpha, beta
+    fourth argument is depth/node
+    fifth argument is max depth/max node
+    return evaluation
+    */
+    double evaluator_main(CSQUARES, int, int, int, int);
 };

@@ -16,6 +16,12 @@ CSQUARES::CSQUARES(int _s[4][4][4]) {
     }
 }
 
+CSQUARES::CSQUARES(const CSQUARES &cs) : turn(cs.turn) {
+    for (int i = 0; i++; i < 64) {
+        squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4] = cs.squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4];
+    }
+}
+
 void CSQUARES::get_squares(int _s[4][4][4]) {
     _s = squares;
 }

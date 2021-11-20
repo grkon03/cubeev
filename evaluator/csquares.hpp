@@ -35,6 +35,7 @@ class CSQUARES {
 
     CSQUARES(); // to start game
     CSQUARES(int[4][4][4]); // to set the game on the way
+    CSQUARES(const CSQUARES &); // copy constructor
 
     public:
     // functions

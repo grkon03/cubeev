@@ -109,7 +109,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         return -10000;
     }
     
-    int evaluation = 0;
+    double evaluation = 0;
     int z, numofball;
     int index = 0;
     int s[4][4][4];
@@ -415,4 +415,58 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     }
 
     return evaluation;
+}
+
+double CEVALUATOR::evaluator_main(CSQUARES cs, int alpha, int beta, int depth, int depthmax) {
+    switch (cs.judge_winner()) {
+        case 1:
+        return 10000;
+        case 2:
+        return -10000;
+    }
+
+    if (cs.get_turn() == 64) {
+        return 0;
+    }
+
+    CSQUARES cs_copy;
+    int turn = cs.player_corrent_turn();
+    double ret;
+    bool move_suc;
+
+    if (depth == depthmax) {
+        return temporary_evaluator(cs);
+    } else {
+        for (int s23 = 0; s23 < 16; s23++) {
+            cs_copy = cs;
+            move_suc = cs_copy.move((int)(s23 / 4), s23 % 4);
+            if (!move_suc) {
+                continue;
+            }
+            ret = evaluator_main(cs_copy, alpha, beta, depth + 1, depthmax);
+            if (turn == 1) {
+                if (beta <= ret) {
+                    return ret;
+                } else if (alpha < ret) {
+                    alpha = ret;
+                    bestmove[depth] = s23;
+                }
+            } else if (turn == 2) {
+                if (alpha >= ret) {
+                    return ret;
+                } else if (beta > ret) {
+                    beta = ret;
+                    bestmove[depth] = s23;
+                }
+            }
+        }
+    }
+
+    if (turn == 1) {
+        return alpha;
+    } else if (turn == 2) {
+        return beta;
+    }
+
+    return 0;
 }
