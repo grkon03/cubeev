@@ -18,6 +18,7 @@ About :
 #define LINE_DAT_SIZE 76 // size of line.dat
 #define LINE_DAT_FILE "data/line.dat" // file name of line.dat
 #define LINE_DAT_DEFAULT 3 // default value of line.dat
+#define LINE_DAT_IMPROVE 0.1 // the unit value to improve
 typedef double LINE_DAT_TYPE; // data type of line.dat
 
 //// data handler
@@ -65,15 +66,6 @@ return true if success, or false if else
 typename is type of value
 */
 template <typename T> bool data_put(int, T []);
-
-/*
-improve data of line.dat:
-first argument is the game of teacher
-second argument is data to be improved
-third argument is the pointer of improved data container
-return true if winner exists, false if else
-*/
-bool improve_line_dat(CSQUARES, LINE_DAT_TYPE[LINE_DAT_SIZE], LINE_DAT_TYPE *);
 
 //// evaluator
 
