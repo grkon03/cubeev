@@ -10,6 +10,7 @@ About :
 #include "csquares.hpp"
 #include <string>
 #include <fstream>
+#include <climits>
 
 // definition of constant
 
@@ -101,6 +102,12 @@ class CEVALUATOR {
     public:
     // functions
 
+    /*
+    calculate evaluation:
+    calculate evaluation of board of first argument
+    return evaluation
+    */
+    double evaluate(CSQUARES);
 
     private:
     // private functions

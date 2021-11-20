@@ -470,3 +470,13 @@ double CEVALUATOR::evaluator_main(CSQUARES cs, int alpha, int beta, int depth, i
 
     return 0;
 }
+
+double CEVALUATOR::evaluate(CSQUARES cs) {
+    int depthmax = 0;
+    now_analyzed_squares = cs;
+    for (int i = 0; i < 64; i++) {
+        bestmove[i] = -1;
+    }
+    depthmax = 4;
+    now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
+}
