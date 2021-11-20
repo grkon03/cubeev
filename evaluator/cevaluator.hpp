@@ -109,6 +109,16 @@ class CEVALUATOR {
     */
     double evaluate(CSQUARES);
 
+    // data handler
+
+    /*
+    set data:
+    first argument is the id of data
+    set second arigument as the data
+    no return
+    */
+    template <typename T> void data_set(int, T[]);
+
     private:
     // private functions
 

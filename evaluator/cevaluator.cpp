@@ -79,6 +79,16 @@ template <typename T> bool data_put(int id, T data[]) {
     return true;
 }
 
+template <typename T> void CEVALUATOR::data_set(int id, T data[]) {
+    switch(id) {
+        case LINE_DAT_ID:
+        for (int i = 0; i < LINE_DAT_SIZE; i++) {
+            line_data[i] = data[i];
+        }
+        break;
+    }
+}
+
 // evaluator
 
 CEVALUATOR::CEVALUATOR() : now_evaluation(0) {
