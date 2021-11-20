@@ -79,6 +79,15 @@ template <typename T> bool data_put(int id, T data[]) {
     return true;
 }
 
+bool improve_line_dat(CSQUARES cs, LINE_DAT_TYPE old_data[LINE_DAT_SIZE], LINE_DAT_TYPE *new_data) {
+    int winner = cs.judge_winner();
+    if (winner == 0) {
+        return false;
+    }
+
+    return true;
+}
+
 template <typename T> void CEVALUATOR::data_set(int id, T data[]) {
     switch(id) {
         case LINE_DAT_ID:

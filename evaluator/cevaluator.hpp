@@ -66,6 +66,15 @@ typename is type of value
 */
 template <typename T> bool data_put(int, T []);
 
+/*
+improve data of line.dat:
+first argument is the game of teacher
+second argument is data to be improved
+third argument is the pointer of improved data container
+return true if winner exists, false if else
+*/
+bool improve_line_dat(CSQUARES, LINE_DAT_TYPE[LINE_DAT_SIZE], LINE_DAT_TYPE *);
+
 //// evaluator
 
 class CEVALUATOR {
