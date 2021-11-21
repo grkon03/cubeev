@@ -73,43 +73,43 @@ CMakeFiles/cubeev.dir/main.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/main.cpp.o: ../main.cpp
 CMakeFiles/cubeev.dir/main.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cubeev.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/main.cpp.o -MF CMakeFiles/cubeev.dir/main.cpp.o.d -o CMakeFiles/cubeev.dir/main.cpp.o -c /Users/ousuke/cubeev/main.cpp
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/main.cpp.o -MF CMakeFiles/cubeev.dir/main.cpp.o.d -o CMakeFiles/cubeev.dir/main.cpp.o -c /Users/ousuke/cubeev/main.cpp
 
 CMakeFiles/cubeev.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/main.cpp > CMakeFiles/cubeev.dir/main.cpp.i
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/main.cpp > CMakeFiles/cubeev.dir/main.cpp.i
 
 CMakeFiles/cubeev.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/main.cpp -o CMakeFiles/cubeev.dir/main.cpp.s
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/main.cpp -o CMakeFiles/cubeev.dir/main.cpp.s
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: ../evaluator/cevaluator.cpp
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -c /Users/ousuke/cubeev/evaluator/cevaluator.cpp
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -c /Users/ousuke/cubeev/evaluator/cevaluator.cpp
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/cevaluator.cpp > CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/cevaluator.cpp > CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/cevaluator.cpp -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/cevaluator.cpp -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: ../evaluator/csquares.cpp
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -c /Users/ousuke/cubeev/evaluator/csquares.cpp
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -c /Users/ousuke/cubeev/evaluator/csquares.cpp
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/csquares.cpp > CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/csquares.cpp > CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/csquares.cpp -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s
+	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/csquares.cpp -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s
 
 # Object files for target cubeev
 cubeev_OBJECTS = \

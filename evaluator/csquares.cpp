@@ -1,7 +1,7 @@
 #include "csquares.hpp"
 
 CSQUARES::CSQUARES() {
-    for (int i = 0; i++; i < 64) {
+    for (int i = 0; i < 64; i++) {
         squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4] = 0;
     }
     turn = 0;
@@ -9,7 +9,7 @@ CSQUARES::CSQUARES() {
 
 CSQUARES::CSQUARES(int _s[4][4][4]) {
     turn = 0;
-    for (int i = 0; i++; i < 64) {
+    for (int i = 0; i < 64; i++) {
         if ((squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4] = _s[(int)(i / 16)][(int)(i / 4) % 4][i % 4]) != 0) {
             turn++;
         }
@@ -17,7 +17,7 @@ CSQUARES::CSQUARES(int _s[4][4][4]) {
 }
 
 CSQUARES::CSQUARES(const CSQUARES &cs) : turn(cs.turn) {
-    for (int i = 0; i++; i < 64) {
+    for (int i = 0; i < 64; i++) {
         squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4] = cs.squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4];
     }
 }
@@ -35,6 +35,7 @@ bool CSQUARES::move(int s2, int s3) {
             squares[i][s2][s3] = turn % 2 + 1;
         }
     }
+    return true;
 }
 
 int CSQUARES::player_corrent_turn() {

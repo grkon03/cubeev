@@ -28,7 +28,8 @@ template <typename T> T datadefault_byID(int id) {
     return 0;
 }
 
-template <typename T> bool data_init(int id,  bool _delete) {
+// for template
+template <typename T> bool _data_init(int id,  bool _delete) {
     string file = datafile_byID(id);
     ifstream ifs(file);
     bool exist = ifs.is_open();
@@ -50,6 +51,10 @@ template <typename T> bool data_init(int id,  bool _delete) {
         return true;
     }
     return false;
+}
+
+template<> bool data_init<LINE_DAT_TYPE>(int id, bool _delete) {
+    return _data_init<LINE_DAT_TYPE>(id, _delete);
 }
 
 template <typename T> bool data_get(int id, T *data) {
@@ -515,4 +520,5 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
     }
     depthmax = 4;
     now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
+    return now_evaluation;
 }
