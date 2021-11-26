@@ -194,3 +194,16 @@ int CSQUARES::judge_winner() {
 
     return 0;
 }
+
+void CSQUARES::cout_board() {
+    for (int i = 0; i < 4; i++) {
+        std::cout << (4 - i) << "段目" << std::endl;
+        for (int j = 0; j < 4; j++) {
+            std::cout << "｜";
+            for (int k = 0; k < 4; k++) {
+                std::cout << squares[3 - i][j][k];
+            }
+            std::cout << std::endl;
+        }
+    }
+}

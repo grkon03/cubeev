@@ -1,5 +1,7 @@
 #pragma once
 
+#include <iostream>
+
 /*
 "csquares.hpp" created by grkon(Twitter: @progblog_note)
 About :
@@ -70,4 +72,8 @@ class CSQUARES {
     return winner number if either win, or 0 if else
     */
     int judge_winner();
+    /*
+    out put the board
+    */
+    void cout_board();
 };

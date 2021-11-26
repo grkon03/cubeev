@@ -24,7 +24,10 @@ int main(int argc, char *argv[]) {
     // line.dat データが存在しなかったら作成する
     data_init<LINE_DAT_TYPE>(LINE_DAT_ID, false);
 
+    // データをセット
+
     LINE_DAT_TYPE *ldat;
+    
     data_get(LINE_DAT_ID, ldat);
     cev.data_set(LINE_DAT_ID, ldat);
 
