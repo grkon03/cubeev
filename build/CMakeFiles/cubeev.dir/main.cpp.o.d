@@ -1,30 +1,15 @@
 CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /Users/ousuke/cubeev/evaluator/cevaluator.hpp \
  /Users/ousuke/cubeev/evaluator/csquares.hpp \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/string \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/c++config.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/os_defines.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/cpu_defines.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ostream \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ios \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iosfwd \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stringfwd.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/memoryfwd.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/char_traits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_algobase.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/functexcept.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception_defines.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cpp_type_traits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/type_traits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/numeric_traits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_pair.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/move.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/type_traits \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator_base_types.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator_base_funcs.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/concept_check.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/debug/assertions.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ptr_traits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/debug/debug.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/predefined_ops.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/postypes.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/cwchar \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/wchar.h \
@@ -76,6 +61,33 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/ctype.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_ctype.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/runetype.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/exception \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception_ptr.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception_defines.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cxxabi_init_exception.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/lib/gcc/10/gcc/aarch64-apple-darwin20/10.2.1/include/stddef.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/typeinfo \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/hash_bytes.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/new \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/nested_exception.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/move.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/type_traits \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/char_traits.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_algobase.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/functexcept.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cpp_type_traits.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/type_traits.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/numeric_traits.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_pair.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator_base_types.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator_base_funcs.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/concept_check.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/debug/assertions.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_iterator.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ptr_traits.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/debug/debug.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/predefined_ops.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/cstdint \
  /opt/homebrew/Cellar/gcc/10.2.0_4/lib/gcc/10/gcc/aarch64-apple-darwin20/10.2.1/include/stdint.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/lib/gcc/10/gcc/aarch64-apple-darwin20/10.2.1/include-fixed/stdint.h \
@@ -85,35 +97,13 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uint64_t.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_intmax_t.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_types/_uintmax_t.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/allocator.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/c++allocator.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/new_allocator.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/new \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/exception \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/exception_ptr.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cxxabi_init_exception.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/lib/gcc/10/gcc/aarch64-apple-darwin20/10.2.1/include/stddef.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/typeinfo \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/hash_bytes.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/nested_exception.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/localefwd.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/c++locale.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/clocale \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/locale.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/_locale.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iosfwd \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/cctype \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ostream_insert.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cxxabi_forced.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_function.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/backward/binders.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/range_access.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/initializer_list \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/iterator_concepts.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/concepts \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/range_cmp.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/basic_string.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ios_base.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/atomicity.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/gthr.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/gthr-default.h \
@@ -135,6 +125,21 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_mach_port_t.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/_types/_sigset_t.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/atomic_word.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/locale_classes.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/string \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/allocator.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/c++allocator.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/new_allocator.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ostream_insert.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/cxxabi_forced.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_function.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/backward/binders.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/range_access.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/initializer_list \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/iterator_concepts.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/concepts \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/range_cmp.h \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/basic_string.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ext/alloc_traits.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/alloc_traits.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/stl_construct.h \
@@ -176,11 +181,6 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/charconv.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/functional_hash.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/basic_string.tcc \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/fstream \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/istream \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ios \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ios_base.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/locale_classes.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/locale_classes.tcc \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/system_error \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/error_constants.h \
@@ -197,9 +197,10 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/ctype_inline.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/locale_facets.tcc \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/basic_ios.tcc \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/ostream \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/ostream.tcc \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/istream \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/istream.tcc \
+ /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/fstream \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/bits/codecvt.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/basic_file.h \
  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/aarch64-apple-darwin20/bits/c++io.h \
@@ -211,5 +212,4 @@ CMakeFiles/cubeev.dir/main.cpp.o: /Users/ousuke/cubeev/main.cpp \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
- /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
- /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream
+ /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h

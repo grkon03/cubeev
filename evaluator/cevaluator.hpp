@@ -59,7 +59,7 @@ second argument is the pointer of data container
 return true if success, or false if else
 typename is type of value
 */
-template <typename T> bool data_get(int, T *);
+template <typename T> bool data_get(int, T []);
 
 /*
 put data of AI:
@@ -95,7 +95,7 @@ class CEVALUATOR {
     /*
     evaluation of "now_analyzed_squares"
     */
-    int now_evaluation;
+    double now_evaluation;
 
     public:
     // constructor
@@ -112,6 +112,34 @@ class CEVALUATOR {
     return evaluation
     */
     double evaluate(CSQUARES);
+
+    /*
+    get "now_analyzed_squares":
+    no argument
+    return the variable
+    */
+    CSQUARES get_now_analyzed_squares();
+
+    /*
+    get "bestmove":
+    first argument it the pointer of the container of "bestmove"
+    no return
+    */
+    void get_bestmove(int [64]);
+
+    /*
+    get "bestmove[0]":
+    no argument
+    return the variable
+    */
+    int get_next_bestmove();
+
+    /*
+    get "now_evaluation":
+    no argument
+    return the variable
+    */
+    double  get_now_evaluation();
 
     // data handler
 
@@ -184,14 +212,13 @@ template <typename T> bool data_init(int id,  bool _delete) {
     return false;
 }
 
-template <typename T> bool data_get(int id, T *data) {
+template <typename T> bool data_get(int id, T data[]) {
     ifstream ifs(datafile_byID(id), ios::binary);
     if (!ifs) {
         return false;
     }
 
     int dsize = datasize_byID(id);
-    data = new T[dsize];
     for (int i = 0; i < dsize; i++) {
         ifs.read((char *) &data[i], sizeof(T));
     }

@@ -448,3 +448,21 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
     now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
     return now_evaluation;
 }
+
+CSQUARES CEVALUATOR::get_now_analyzed_squares() {
+    return now_analyzed_squares;
+}
+
+void CEVALUATOR::get_bestmove(int bm[64]) {
+    for (int i = 0; i < 64; i++) {
+        bm[i] = bestmove[i];
+    }
+}
+
+int CEVALUATOR::get_next_bestmove() {
+    return bestmove[0];
+}
+
+double CEVALUATOR::get_now_evaluation() {
+    return now_evaluation;
+}

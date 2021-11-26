@@ -33,8 +33,10 @@ bool CSQUARES::move(int s2, int s3) {
     for (int i = 0; i < 3; i++) {
         if (squares[i][s2][s3] == 0) {
             squares[i][s2][s3] = turn % 2 + 1;
+            break;
         }
     }
+    turn++;
     return true;
 }
 

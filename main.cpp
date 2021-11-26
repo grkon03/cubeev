@@ -12,7 +12,7 @@ using namespace std;
 int main_noarg();
 int main_usearg(int, char *[]);
 
-int play_game(int);
+int playgame(int);
 
 // グローバル変数
 CEVALUATOR cev;
@@ -26,8 +26,8 @@ int main(int argc, char *argv[]) {
 
     // データをセット
 
-    LINE_DAT_TYPE *ldat;
-    
+    LINE_DAT_TYPE ldat[64];
+
     data_get(LINE_DAT_ID, ldat);
     cev.data_set(LINE_DAT_ID, ldat);
 
@@ -79,6 +79,7 @@ int main_usearg(int vol, char *arg[]) {
 int playgame(int menu) {
     string sinput;
     int input;
+    int ex = false;
     bool p_ai[2] = {false, false};
 
     /*
@@ -97,6 +98,11 @@ int playgame(int menu) {
                 case 1:
                 case 2:
                 p_ai[input % 2] = true;
+                ex = true;
+                break;
+            }
+            if (ex) {
+                break;
             }
         }
         break;
@@ -110,7 +116,50 @@ int playgame(int menu) {
         return 0;
     }
 
+    CSQUARES csq;
+    int t;
     int nextmove;
+    string temp;
+    int winner;
+
+    // ゲームループ
+    while(1) {
+        csq.cout_board();
+        cev.evaluate(csq);
+        cout << "評価値 : " << cev.get_now_evaluation();
+        t = csq.player_corrent_turn();
+        temp = (t == 1) ? "先手" : "後手";
+        cout << temp << "のターンです" << endl;
+        cout << "次の手を入力してください" << endl;
+        if (p_ai[t - 1]) {
+            cout << "AI > ";
+            nextmove = cev.get_next_bestmove();
+            cout << (int(nextmove / 4) * 10 + (nextmove % 4)) << endl;
+        } else {
+            cout << "user > ";
+            cin >> sinput;
+            input = stoi(sinput);
+            if (
+                (0 <= (input % 10) && (input % 10) < 4) &&
+                (0 <= int(input /10) && int(input / 10) < 4)
+            ) {
+                nextmove = int(input / 10) * 4 + input % 10;
+            } else {
+                cout << "存在しない手です" << endl;
+                continue;
+            }
+        }
+        if (csq.move(int(nextmove / 4), nextmove % 4)) {
+            cout << "その手は指せません" << endl;
+            continue;
+        }
+        winner = csq.judge_winner();
+        if (winner != 0) {
+            break;
+        }
+    }
+    temp = (winner == 1) ? "先手" : "後手";
+    cout << temp << "の勝利です" << endl;
 
     return 0;
 }
