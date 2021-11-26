@@ -15,8 +15,8 @@ int main_usearg(int, char *[]);
 */
 int main(int argc, char *argv[]) {
     // line.dat データの初期化
-    data_init<LINE_DAT_TYPE>(LINE_DAT_ID, false);
-
+    data_init<LINE_DAT_TYPE>(LINE_DAT_ID, true);
+    
     if (argc == 1) {
         return main_noarg();
     } else {

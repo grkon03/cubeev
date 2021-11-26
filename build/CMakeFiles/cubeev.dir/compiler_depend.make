@@ -214,7 +214,8 @@ CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: ../evaluator/cevaluator.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/machine/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/limits.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/_limits.h \
-  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h
+  /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/sys/syslimits.h \
+  /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: ../evaluator/csquares.cpp \
   ../evaluator/csquares.hpp
@@ -436,9 +437,9 @@ CMakeFiles/cubeev.dir/main.cpp.o: ../main.cpp \
   /opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream
 
 
-/opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream:
-
 ../evaluator/csquares.cpp:
+
+/opt/homebrew/Cellar/gcc/10.2.0_4/include/c++/10.2.1/iostream:
 
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX.sdk/usr/include/arm/_limits.h:
 
