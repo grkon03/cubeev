@@ -265,7 +265,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         skip = false;
         for (int s3 = 0; s3 < 4; s3++) {
             if (s[s3][s2][3 - s3] == 0) {
-
+                continue;
             } else if (z == 0) {
                 z = s[s3][s2][3 - s3];
                 numofball++;
@@ -316,7 +316,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         if (s[s1][s1][3 - s1] == 0) {
             continue;
         } else if (z == 0) {
-            z = s[s1][s1][s1];
+            z = s[s1][s1][3 - s1];
             numofball++;
         } else if (z != s[s1][s1][3 - s1]) {
             skip = true;
@@ -340,7 +340,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         if (s[s1][3 - s1][s1] == 0) {
             continue;
         } else if (z == 0) {
-            z = s[s1][s1][s1];
+            z = s[s1][3 - s1][s1];
             numofball++;
         } else if (z != s[s1][3 - s1][s1]) {
             skip = true;
@@ -364,7 +364,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
         if (s[s1][3 - s1][3 - s1] == 0) {
             continue;
         } else if (z == 0) {
-            z = s[s1][s1][s1];
+            z = s[s1][3 - s1][3 - s1];
             numofball++;
         } else if (z != s[s1][3 - s1][3 - s1]) {
             skip = true;
@@ -444,7 +444,11 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
     for (int i = 0; i < 64; i++) {
         bestmove[i] = -1;
     }
-    depthmax = 4;
+    if (cs.player_corrent_turn() == 1) {
+        depthmax = 6;
+    } else {
+        depthmax = 7;
+    }
     now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
     return now_evaluation;
 }

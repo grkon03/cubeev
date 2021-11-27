@@ -27,10 +27,12 @@ int main(int argc, char *argv[]) {
     // データをセット
 
     LINE_DAT_TYPE *ldat;
-    ldat = new LINE_DAT_TYPE[64];
+    ldat = new LINE_DAT_TYPE[LINE_DAT_SIZE];
 
     data_get(LINE_DAT_ID, ldat);
-    cout << ldat[0] << endl;
+    for (int i = 0; i < LINE_DAT_SIZE; i++) {
+        cout << ldat[i];
+    }
     cev.data_set(LINE_DAT_ID, ldat);
 
     if (argc == 1) {
@@ -60,6 +62,7 @@ int main_noarg() {
             case 2:
             case 3:
             playgame(menu);
+            ex = true;
             break;
             case 0:
             ex = true;
@@ -136,16 +139,16 @@ int playgame(int menu) {
         if (p_ai[t - 1]) {
             cout << "AI > ";
             nextmove = cev.get_next_bestmove();
-            cout << (int(nextmove / 4) * 10 + (nextmove % 4)) << endl;
+            cout << (int(nextmove / 4 + 1) * 10 + (nextmove % 4 + 1)) << endl;
         } else {
             cout << "user > ";
             cin >> sinput;
             input = stoi(sinput);
             if (
-                (0 <= (input % 10) && (input % 10) < 4) &&
-                (0 <= int(input /10) && int(input / 10) < 4)
+                (1 <= (input % 10) && (input % 10) <= 4) &&
+                (1 <= int(input /10) && int(input / 10) <= 4)
             ) {
-                nextmove = int(input / 10) * 4 + input % 10;
+                nextmove = int(input / 10 - 1) * 4 + input % 10 - 1;
             } else {
                 cout << "存在しない手です" << endl;
                 continue;
@@ -160,6 +163,8 @@ int playgame(int menu) {
             break;
         }
     }
+    
+    csq.cout_board();
     temp = (winner == 1) ? "先手" : "後手";
     cout << temp << "の勝利です" << endl;
 

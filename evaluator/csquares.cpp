@@ -23,7 +23,9 @@ CSQUARES::CSQUARES(const CSQUARES &cs) : turn(cs.turn) {
 }
 
 void CSQUARES::get_squares(int _s[4][4][4]) {
-    _s = squares;
+    for (int i = 0; i < 64; i++) {
+        _s[(int)(i / 16)][(int)(i / 4) % 4][i % 4] = squares[(int)(i / 16)][(int)(i / 4) % 4][i % 4];
+    }
 }
 
 bool CSQUARES::move(int s2, int s3) {
@@ -93,8 +95,8 @@ int CSQUARES::judge_winner() {
             continue;
         } else if (
             squares[0][0][s3] == z &&
-            squares[1][2][s3] == z &&
-            squares[1][2][s3] == z
+            squares[1][1][s3] == z &&
+            squares[2][2][s3] == z
         ) {
             return z;
         }
@@ -203,7 +205,7 @@ void CSQUARES::cout_board() {
         for (int j = 0; j < 4; j++) {
             std::cout << "｜";
             for (int k = 0; k < 4; k++) {
-                std::cout << squares[3 - i][j][k];
+                std::cout << squares[3 - i][j][k] << " ";
             }
             std::cout << std::endl;
         }
