@@ -26,9 +26,11 @@ int main(int argc, char *argv[]) {
 
     // データをセット
 
-    LINE_DAT_TYPE ldat[64];
+    LINE_DAT_TYPE *ldat;
+    ldat = new LINE_DAT_TYPE[64];
 
     data_get(LINE_DAT_ID, ldat);
+    cout << ldat[0] << endl;
     cev.data_set(LINE_DAT_ID, ldat);
 
     if (argc == 1) {
@@ -126,7 +128,7 @@ int playgame(int menu) {
     while(1) {
         csq.cout_board();
         cev.evaluate(csq);
-        cout << "評価値 : " << cev.get_now_evaluation();
+        cout << "評価値 : " << cev.get_now_evaluation() << endl;
         t = csq.player_corrent_turn();
         temp = (t == 1) ? "先手" : "後手";
         cout << temp << "のターンです" << endl;
@@ -149,7 +151,7 @@ int playgame(int menu) {
                 continue;
             }
         }
-        if (csq.move(int(nextmove / 4), nextmove % 4)) {
+        if (!csq.move(int(nextmove / 4), nextmove % 4)) {
             cout << "その手は指せません" << endl;
             continue;
         }

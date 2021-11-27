@@ -43,10 +43,9 @@ initialize data of AI:
 first argument is id of data file
 second argument is the size of data
 behavior depending on third argument
-    - true  : delete data in the file and create new data,
-              return true
-    - false : if the file don't exist, create new file and data,
-              return true if the path exists, or false if else
+    - true  : delete data in the file and create new data
+    - false : if the file don't exist, create new file and data
+return true if success, or false if else
 typename is type of value
 */
 template <typename T> bool data_init(int, bool);
@@ -189,27 +188,22 @@ template <typename T> bool data_init(int id,  bool _delete) {
     ifstream ifs(file);
     bool exist = ifs.is_open();
 
-    ofstream ofs;
-    ios_base::openmode mode = ios_base::binary;
-    if (_delete) {
-        mode = mode | ios_base::trunc;
+    if (!_delete && exist) {
+        return true;
     }
-    ofs.open(file, mode);
+
+    ofstream ofs(file, ios_base::binary | ios_base::trunc);
 
     if (!ofs) {
-        std::cout << "エラー";
+        return false;
     }
 
     T def = datadefault_byID<T>(id);
-    if (_delete || !exist) {
-        for (int i = 0; i < datasize_byID(id); i++) {
-            ofs.write((char *) &def, sizeof(T));
-        }
+    for (int i = 0; i < datasize_byID(id); i++) {
+        ofs.write((char *) &def, sizeof(T));
     }
-    if (_delete || exist) {
-        return true;
-    }
-    return false;
+
+    return true;
 }
 
 template <typename T> bool data_get(int id, T data[]) {
