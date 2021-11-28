@@ -92,7 +92,6 @@ int CSQUARES::judge_winner() {
     for (int s3 = 0; s3 < 4; s3++) {
         z = squares[3][3][s3];
         if (z == 0) {
-            continue;
         } else if (
             squares[0][0][s3] == z &&
             squares[1][1][s3] == z &&
@@ -114,7 +113,6 @@ int CSQUARES::judge_winner() {
     for (int s1 = 0; s1 < 4; s1++) {
         z = squares[s1][3][3];
         if (z == 0) {
-            continue;
         } else if (
             squares[s1][0][0] == z &&
             squares[s1][1][1] == z &&
@@ -136,7 +134,6 @@ int CSQUARES::judge_winner() {
     for (int s2 = 0; s2 < 4; s2++) {
         z = squares[3][s2][3];
         if (z == 0) {
-            continue;
         } else if (
             squares[0][s2][0] == z &&
             squares[1][s2][1] == z &&

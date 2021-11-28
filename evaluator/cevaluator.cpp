@@ -440,14 +440,39 @@ double CEVALUATOR::evaluator_main(CSQUARES cs, int alpha, int beta, int depth, i
 
 double CEVALUATOR::evaluate(CSQUARES cs) {
     int depthmax = 0;
+    int turn = cs.get_turn();
+    int t = cs.player_corrent_turn();
     now_analyzed_squares = cs;
     for (int i = 0; i < 64; i++) {
         bestmove[i] = -1;
     }
-    if (cs.player_corrent_turn() == 1) {
-        depthmax = 6;
-    } else {
-        depthmax = 7;
+    
+    if (turn < 14) {
+        if (t == 1) {
+            depthmax = 6;
+        } else {
+            depthmax = 5;
+        }
+    } else if (turn < 24) {
+        if (t == 1) {
+            depthmax = 8;
+        } else {
+            depthmax = 7;
+        }
+    } else if (turn < 34) {
+        if (t == 1) {
+            depthmax = 10;
+        } else {
+            depthmax = 9;
+        }
+    } else if (turn < 44) {
+        if (t == 1) {
+            depthmax = 12;
+        } else {
+            depthmax = 11;
+        }
+    } else if (turn < 54) {
+        depthmax = 64 - turn;
     }
     now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
     return now_evaluation;
