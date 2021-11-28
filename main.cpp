@@ -30,9 +30,6 @@ int main(int argc, char *argv[]) {
     ldat = new LINE_DAT_TYPE[LINE_DAT_SIZE];
 
     data_get(LINE_DAT_ID, ldat);
-    for (int i = 0; i < LINE_DAT_SIZE; i++) {
-        cout << ldat[i];
-    }
     cev.data_set(LINE_DAT_ID, ldat);
 
     if (argc == 1) {
