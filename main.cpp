@@ -166,6 +166,7 @@ int playgame(int menu) {
     cout << endl;
     cout << "学習させますか？[y/n]" << endl;
     getline(cin, sinput);
+
     if (sinput[0] == 'y' || sinput[0] == 'Y') {
         cev.improve_paramater(csq);
     }
