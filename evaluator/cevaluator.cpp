@@ -454,19 +454,19 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
         } else {
             depthmax = 5;
         }
-    } else if (turn < 30) {
+    } else if (turn < 32) {
         if (t == 1) {
             depthmax = 8;
         } else {
             depthmax = 7;
         }
-    } else if (turn < 42) {
+    } else if (turn < 48) {
         if (t == 1) {
             depthmax = 10;
         } else {
             depthmax = 9;
         }
-    } else if (turn < 52) {
+    } else {
         if (t == 1) {
             depthmax = 64 - turn;
         } else {
