@@ -447,32 +447,30 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
         bestmove[i] = -1;
     }
     
-    if (turn < 14) {
+    if (turn < 16) {
         if (t == 1) {
             depthmax = 6;
         } else {
             depthmax = 5;
         }
-    } else if (turn < 24) {
+    } else if (turn < 30) {
         if (t == 1) {
             depthmax = 8;
         } else {
             depthmax = 7;
         }
-    } else if (turn < 34) {
+    } else if (turn < 42) {
         if (t == 1) {
             depthmax = 10;
         } else {
             depthmax = 9;
         }
-    } else if (turn < 44) {
+    } else if (turn < 52) {
         if (t == 1) {
-            depthmax = 12;
+            depthmax = 64 - turn;
         } else {
-            depthmax = 11;
+            depthmax = 64 - turn;
         }
-    } else if (turn < 54) {
-        depthmax = 64 - turn;
     }
     now_evaluation = evaluator_main(cs, -INT_MAX, INT_MAX, 0, depthmax);
     return now_evaluation;

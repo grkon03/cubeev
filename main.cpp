@@ -123,7 +123,7 @@ int playgame(int menu) {
     int nextmove;
     string temp;
     int winner;
-
+    
     // ゲームループ
     while(1) {
         csq.cout_board();

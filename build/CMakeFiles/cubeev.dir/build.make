@@ -53,10 +53,10 @@ RM = /opt/homebrew/Cellar/cmake/3.21.4/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/ousuke/cubeev
+CMAKE_SOURCE_DIR = /Users/ousuke/Projects/cubeev
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/ousuke/cubeev/build
+CMAKE_BINARY_DIR = /Users/ousuke/Projects/cubeev/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/cubeev.dir/depend.make
@@ -72,44 +72,44 @@ include CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/main.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/main.cpp.o: ../main.cpp
 CMakeFiles/cubeev.dir/main.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cubeev.dir/main.cpp.o"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/main.cpp.o -MF CMakeFiles/cubeev.dir/main.cpp.o.d -o CMakeFiles/cubeev.dir/main.cpp.o -c /Users/ousuke/cubeev/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/Projects/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cubeev.dir/main.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/main.cpp.o -MF CMakeFiles/cubeev.dir/main.cpp.o.d -o CMakeFiles/cubeev.dir/main.cpp.o -c /Users/ousuke/Projects/cubeev/main.cpp
 
 CMakeFiles/cubeev.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/main.cpp.i"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/main.cpp > CMakeFiles/cubeev.dir/main.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/Projects/cubeev/main.cpp > CMakeFiles/cubeev.dir/main.cpp.i
 
 CMakeFiles/cubeev.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/main.cpp.s"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/main.cpp -o CMakeFiles/cubeev.dir/main.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/Projects/cubeev/main.cpp -o CMakeFiles/cubeev.dir/main.cpp.s
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: ../evaluator/cevaluator.cpp
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -c /Users/ousuke/cubeev/evaluator/cevaluator.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/Projects/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o -c /Users/ousuke/Projects/cubeev/evaluator/cevaluator.cpp
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/cevaluator.cpp > CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/Projects/cubeev/evaluator/cevaluator.cpp > CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.i
 
 CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/cevaluator.cpp -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/Projects/cubeev/evaluator/cevaluator.cpp -o CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.s
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: CMakeFiles/cubeev.dir/flags.make
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: ../evaluator/csquares.cpp
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o: CMakeFiles/cubeev.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -c /Users/ousuke/cubeev/evaluator/csquares.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/ousuke/Projects/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o"
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -MF CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o.d -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o -c /Users/ousuke/Projects/cubeev/evaluator/csquares.cpp
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/cubeev/evaluator/csquares.cpp > CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/ousuke/Projects/cubeev/evaluator/csquares.cpp > CMakeFiles/cubeev.dir/evaluator/csquares.cpp.i
 
 CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s"
-	/opt/homebrew/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/cubeev/evaluator/csquares.cpp -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s
+	/usr/bin/g++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/ousuke/Projects/cubeev/evaluator/csquares.cpp -o CMakeFiles/cubeev.dir/evaluator/csquares.cpp.s
 
 # Object files for target cubeev
 cubeev_OBJECTS = \
@@ -125,7 +125,7 @@ cubeev: CMakeFiles/cubeev.dir/evaluator/cevaluator.cpp.o
 cubeev: CMakeFiles/cubeev.dir/evaluator/csquares.cpp.o
 cubeev: CMakeFiles/cubeev.dir/build.make
 cubeev: CMakeFiles/cubeev.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ousuke/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cubeev"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/ousuke/Projects/cubeev/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable cubeev"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/cubeev.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -137,6 +137,6 @@ CMakeFiles/cubeev.dir/clean:
 .PHONY : CMakeFiles/cubeev.dir/clean
 
 CMakeFiles/cubeev.dir/depend:
-	cd /Users/ousuke/cubeev/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ousuke/cubeev /Users/ousuke/cubeev /Users/ousuke/cubeev/build /Users/ousuke/cubeev/build /Users/ousuke/cubeev/build/CMakeFiles/cubeev.dir/DependInfo.cmake --color=$(COLOR)
+	cd /Users/ousuke/Projects/cubeev/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/ousuke/Projects/cubeev /Users/ousuke/Projects/cubeev /Users/ousuke/Projects/cubeev/build /Users/ousuke/Projects/cubeev/build /Users/ousuke/Projects/cubeev/build/CMakeFiles/cubeev.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/cubeev.dir/depend
 
