@@ -59,7 +59,6 @@ int main_noarg() {
             case 2:
             case 3:
             playgame(menu);
-            ex = true;
             break;
             case 0:
             ex = true;
@@ -123,6 +122,11 @@ int playgame(int menu) {
     int nextmove;
     string temp;
     int winner;
+    int moves[64];
+
+    for (int i = 0; i < 64; i++) {
+        moves[i] = -1;
+    }
     
     // ゲームループ
     while(1) {
@@ -131,7 +135,7 @@ int playgame(int menu) {
         cout << "評価値 : " << cev.get_now_evaluation() << endl;
         t = csq.player_corrent_turn();
         temp = (t == 1) ? "先手" : "後手";
-        cout << temp << "のターンです" << endl;
+        cout << (csq.get_turn() + 1) << "ターン目:" << temp << "のターンです" << endl;
         cout << "次の手を入力してください" << endl;
         if (p_ai[t - 1]) {
             cout << "AI > ";
@@ -155,6 +159,7 @@ int playgame(int menu) {
             cout << "その手は指せません" << endl;
             continue;
         }
+        moves[csq.get_turn() - 1] = nextmove;
         winner = csq.judge_winner();
         if (winner != 0) {
             break;
@@ -164,6 +169,25 @@ int playgame(int menu) {
     csq.cout_board();
     temp = (winner == 1) ? "先手" : "後手";
     cout << temp << "の勝利です" << endl;
+
+    cout << endl;
+    cout << "今ゲームの棋譜" << endl;
+    for (int i = 0; i < 64; i++) {
+        if (moves[i] == -1) {
+            break;
+        }
+        if (i % 2 == 0) {
+            cout << "先手";
+        } else {
+            cout << "後手";
+        }
+        cout << (int)(moves[i] / 4 + 1) << (int)(moves[i] % 4 + 1);
+        if (i % 2 == 0) {
+            cout << " ";
+        } else {
+            cout << endl;
+        }
+    }
 
     return 0;
 }
