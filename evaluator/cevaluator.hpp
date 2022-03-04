@@ -139,6 +139,14 @@ class CEVALUATOR {
     return the variable
     */
     double  get_now_evaluation();
+    
+    /*
+    improve paramaters:
+    improve paramaters by board of first argument
+    first argument should be finished game
+    return whether succeed;
+    */
+    bool improve_paramater(CSQUARES);
 
     // data handler
 
