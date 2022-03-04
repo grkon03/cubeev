@@ -453,13 +453,13 @@ double CEVALUATOR::evaluate(CSQUARES cs) {
         } else {
             depthmax = 5;
         }
-    } else if (turn < 32) {
+    } else if (turn < 44) {
         if (t == 1) {
             depthmax = 8;
         } else {
             depthmax = 7;
         }
-    } else if (turn < 48) {
+    } else if (turn < 54) {
         if (t == 1) {
             depthmax = 10;
         } else {
