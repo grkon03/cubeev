@@ -1,3 +1,0 @@
-/Users/ousuke/Projects/cubeev/build/CMakeFiles/rebuild_cache.dir
-/Users/ousuke/Projects/cubeev/build/CMakeFiles/edit_cache.dir
-/Users/ousuke/Projects/cubeev/build/CMakeFiles/cubeev.dir
