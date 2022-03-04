@@ -59,7 +59,6 @@ int main_noarg() {
             case 2:
             case 3:
             playgame(menu);
-            ex = true;
             break;
             case 0:
             ex = true;
@@ -164,6 +163,12 @@ int playgame(int menu) {
     csq.cout_board();
     temp = (winner == 1) ? "先手" : "後手";
     cout << temp << "の勝利です" << endl;
+    cout << endl;
+    cout << "学習させますか？[y/n]" << endl;
+    getline(cin, sinput);
+    if (sinput[0] == 'y' || sinput[0] == 'Y') {
+        cev.improve_paramater(csq);
+    }
 
     return 0;
 }
