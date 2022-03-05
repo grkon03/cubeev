@@ -197,5 +197,15 @@ int playgame(int menu) {
         cev.improve_paramater(csq);
     }
 
+    // cout << endl;
+    // cout << "今回のデータ" << endl;
+
+    // LINE_DAT_TYPE data[LINE_DAT_SIZE];
+    // cev.data_get(LINE_DAT_ID, data);
+
+    // for (int i = 0; i < LINE_DAT_SIZE; i++) {
+    //     cout << data[i] << endl;
+    // }
+
     return 0;
 }
