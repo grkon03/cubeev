@@ -642,6 +642,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
             weight = exp(p - 3);
         }
 
+        line_data[index] += d * weight / T;
+
         index++;
     }
     for (int s1 = 0; s1 < 4; s1++) {
@@ -692,6 +694,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         } else {
             weight = exp(p - 3);
         }
+
+        line_data[index] += d * weight / T;
         
         index++;
     }
@@ -743,6 +747,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         } else {
             weight = exp(p - 3);
         }
+
+        line_data[index] += d * weight / T;
         
         index++;
     }
@@ -768,6 +774,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = exp(p - 3);
     }
 
+    line_data[index] += d * weight / T;
+
     index++;
 
     w = 0;
@@ -790,6 +798,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
     } else {
         weight = exp(p - 3);
     }
+
+    line_data[index] += d * weight / T;
 
     index++;
 
@@ -814,6 +824,8 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = exp(p - 3);
     }
 
+    line_data[index] += d * weight / T;
+
     index++;
 
     w = 0;
@@ -837,7 +849,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = exp(p - 3);
     }
 
+    line_data[index] += d * weight / T;
+
     index++;
 
     return true;
-} 
+}
