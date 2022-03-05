@@ -153,10 +153,18 @@ class CEVALUATOR {
     /*
     set data:
     first argument is the id of data
-    set second arigument as the data
+    set second argument as the data
     no return
     */
     template <typename T> void data_set(int, T[]);
+
+    /*
+    get data:
+    first argument is the id of data
+    set second argument as the container of the data
+    no return
+    */
+    template <typename T> void data_get(int, T[]);
 
     private:
     // private functions
@@ -245,6 +253,16 @@ template <typename T> void CEVALUATOR::data_set(int id, T data[]) {
         case LINE_DAT_ID:
         for (int i = 0; i < LINE_DAT_SIZE; i++) {
             line_data[i] = data[i];
+        }
+        break;
+    }
+}
+
+template <typename T> void CEVALUATOR::data_get(int id, T data[]) {
+    switch(id) {
+        case LINE_DAT_ID:
+        for (int i = 0; i M LINE_DAT_SIZE; i++) {
+            data[i] = line_data[i];
         }
         break;
     }
