@@ -13,6 +13,7 @@ int main_noarg();
 int main_usearg(int, char *[]);
 
 int playgame(int);
+int exitproc();
 
 // グローバル変数
 CEVALUATOR cev;
@@ -61,6 +62,7 @@ int main_noarg() {
             playgame(menu);
             break;
             case 0:
+            exitproc();
             ex = true;
             break;
             default:
@@ -191,6 +193,7 @@ int playgame(int menu) {
     
     cout << endl;
     cout << "学習させますか？[y/n]" << endl;
+    cout << "user >";
     getline(cin, sinput);
 
     if (sinput[0] == 'y' || sinput[0] == 'Y') {
@@ -206,6 +209,23 @@ int playgame(int menu) {
     // for (int i = 0; i < LINE_DAT_SIZE; i++) {
     //     cout << data[i] << endl;
     // }
+
+    return 0;
+}
+
+int exitproc() {
+    string input;
+    int line[LINE_DAT_SIZE];
+
+    cout << endl;
+    cout << "保存しますが？[y/n]" << endl;
+    cout << "user >";
+    getline(cin, input);
+
+    if (input[0] == 'Y' || input[0] == 'y') {
+        cev.data_get(LINE_DAT_ID, line);
+        data_put(LINE_DAT_ID, line);
+    }
 
     return 0;
 }
