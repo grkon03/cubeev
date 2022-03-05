@@ -261,7 +261,7 @@ template <typename T> void CEVALUATOR::data_set(int id, T data[]) {
 template <typename T> void CEVALUATOR::data_get(int id, T data[]) {
     switch(id) {
         case LINE_DAT_ID:
-        for (int i = 0; i M LINE_DAT_SIZE; i++) {
+        for (int i = 0; i < LINE_DAT_SIZE; i++) {
             data[i] = line_data[i];
         }
         break;
