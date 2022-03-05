@@ -18,9 +18,9 @@ $ ./cubeev
 ### 1つ目
 以下あるライン上についての話
 
-w, l, p, T を順に、勝者プレイヤーのボールの個数、敗者プレイヤーのボールの個数、そのラインのパラメータ、終了時の経過ターン数、とする。また
+<img src="http://latex.codecogs.com/svg.latex?w,&space;l,&space;p,&space;T" title="http://latex.codecogs.com/svg.latex?w, l, p, T" /> を順に、勝者プレイヤーのボールの個数、敗者プレイヤーのボールの個数、そのラインのパラメータ、終了時の経過ターン数、とする。また
 
-d = w - l
+<img src="http://latex.codecogs.com/svg.latex?d&space;=&space;w&space;-&space;l" title="http://latex.codecogs.com/svg.latex?d = w - l" />
 
 とする。このとき、
 
