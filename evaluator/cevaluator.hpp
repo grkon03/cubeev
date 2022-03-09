@@ -184,7 +184,7 @@ class CEVALUATOR {
     fifth argument is max depth/max node
     return evaluation
     */
-    double evaluator_main(CSQUARES, int, int, int, int);
+    double evaluator_main(CSQUARES, double, double, int, int);
 };
 
 /* implement */

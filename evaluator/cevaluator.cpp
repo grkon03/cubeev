@@ -385,7 +385,7 @@ double CEVALUATOR::temporary_evaluator(CSQUARES cs) {
     return evaluation;
 }
 
-double CEVALUATOR::evaluator_main(CSQUARES cs, int alpha, int beta, int depth, int depthmax) {
+double CEVALUATOR::evaluator_main(CSQUARES cs, double alpha, double beta, int depth, int depthmax) {
     switch (cs.judge_winner()) {
         case 1:
         return 10000;
