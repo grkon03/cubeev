@@ -215,7 +215,7 @@ int playgame(int menu) {
 
 int exitproc() {
     string input;
-    int line[LINE_DAT_SIZE];
+    LINE_DAT_TYPE line[LINE_DAT_SIZE];
 
     cout << endl;
     cout << "保存しますが？[y/n]" << endl;

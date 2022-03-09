@@ -236,7 +236,7 @@ template <typename T> bool data_get(int id, T data[]) {
 }
 
 template <typename T> bool data_put(int id, T data[]) {
-    ofstream ofs(datafile_byID(id));
+    ofstream ofs(datafile_byID(id), ios_base::binary | ios_base::trunc);
     if (!ofs) {
         return false;
     }
