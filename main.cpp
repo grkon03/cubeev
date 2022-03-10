@@ -13,6 +13,7 @@ int main_noarg();
 int main_usearg(int, char *[]);
 
 int playgame(int);
+int learn();
 int exitproc();
 
 // グローバル変数
@@ -51,6 +52,7 @@ int main_noarg() {
         cout << "1. CPUと対戦" << endl;
         cout << "2. CPU同士で対戦" << endl;
         cout << "3. プレイヤー同士で対戦" << endl;
+        cout << "4. AIに学習させる" << endl;
         cout << "0. 終了" << endl;
         cout << "user > ";
         getline(cin, smenu);
@@ -60,6 +62,9 @@ int main_noarg() {
             case 2:
             case 3:
             playgame(menu);
+            break;
+            case 4:
+            learn();
             break;
             case 0:
             exitproc();
@@ -209,6 +214,75 @@ int playgame(int menu) {
     // for (int i = 0; i < LINE_DAT_SIZE; i++) {
     //     cout << data[i] << endl;
     // }
+
+    return 0;
+}
+
+int learn() {
+    string input;
+
+    cout << endl;
+    cout << "何回学習させますか？" << endl;
+    cout << "user > ";
+    getline(cin, input);
+
+    int times = stoi(input);
+
+    cout << "開始します。" << endl;
+
+    CSQUARES cs, cs_temp;
+    int bms[64], moves[64];
+
+    for (int i = 0; i < times; i++) {
+        cout << endl;
+        cout << i + 1 << "回目の対局" << endl;
+        cs = cs_temp;
+        for (int i = 0; i < 64; i++) {
+            moves[i] = -1;
+        }
+        while (cs.judge_winner() == 0 && cs.get_turn() < 64) {
+            cev.evaluate(cs);
+            cev.get_bestmove(bms);
+            moves[cs.get_turn()] = bms[0];
+            cs.move((int)(bms[0] / 4), bms[0] % 4);
+        }
+
+        if (cs.get_turn() == 64) {
+            cout << "引き分け" << endl;
+        } else if (cs.judge_winner() == 1){
+            cout << "先手の勝利" << endl;
+        } else {
+            cout << "後手の勝利" << endl;
+        }
+
+        cout << endl;
+        cout << "今ゲームの棋譜" << endl;
+        for (int i = 0; i < 64; i++) {
+            if (moves[i] == -1) {
+                break;
+            }
+            if (i % 2 == 0) {
+                cout << "先手";
+            } else {
+                cout << "後手";
+            }
+            cout << (int)(moves[i] / 4 + 1) << (int)(moves[i] % 4 + 1);
+            if (i % 2 == 0) {
+                cout << " ";
+            } else {
+                cout << endl;
+            }
+        }
+    } 
+    cout << endl;
+    cout << "今回のデータ" << endl;
+
+    LINE_DAT_TYPE data[LINE_DAT_SIZE];
+    cev.data_get(LINE_DAT_ID, data);
+
+    for (int i = 0; i < LINE_DAT_SIZE; i++) {
+        cout << data[i] << endl;
+    }
 
     return 0;
 }
