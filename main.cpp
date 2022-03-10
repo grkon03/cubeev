@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <random>
 
 using namespace std;
 
@@ -90,6 +91,10 @@ int playgame(int menu) {
     int ex = false;
     bool p_ai[2] = {false, false};
 
+    std::random_device rd;
+    std::default_random_engine eng(rd());
+    std::uniform_int_distribution<int> distr(1, 2);
+
     /*
     1. CPUと対戦
     2. CPU同士で対戦
@@ -108,7 +113,27 @@ int playgame(int menu) {
                 p_ai[input % 2] = true;
                 ex = true;
                 break;
+                case 3:
+                cout << "あなたは";
+
+                switch(distr(eng)) {
+                    case 1:
+                    cout << "先手";
+                    p_ai[1] = true;
+                    break;
+                    case 2:
+                    cout << "後手";
+                    p_ai[0] = true;
+                    break;
+                }
+
+                cout << "です" << endl;
+                ex = true;
+                break;
+                default:
+                break;
             }
+
             if (ex) {
                 break;
             }
@@ -255,6 +280,8 @@ int learn() {
             cout << "後手の勝利" << endl;
         }
 
+        cev.improve_paramater(cs);
+
         cout << endl;
         cout << "今ゲームの棋譜" << endl;
         for (int i = 0; i < 64; i++) {
@@ -292,7 +319,7 @@ int exitproc() {
     LINE_DAT_TYPE line[LINE_DAT_SIZE];
 
     cout << endl;
-    cout << "保存しますが？[y/n]" << endl;
+    cout << "保存しますか？[y/n]" << endl;
     cout << "user >";
     getline(cin, input);
 
