@@ -175,7 +175,7 @@ int playgame(int menu) {
             cout << (int(nextmove / 4 + 1) * 10 + (nextmove % 4 + 1)) << endl;
         } else {
             cout << "user > ";
-            cin >> sinput;
+            getline(cin, sinput);
             input = stoi(sinput);
             if (
                 (1 <= (input % 10) && (input % 10) <= 4) &&
