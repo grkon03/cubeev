@@ -530,9 +530,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -557,9 +557,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -584,9 +584,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -611,9 +611,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -637,9 +637,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -664,9 +664,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -690,9 +690,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -717,9 +717,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -743,9 +743,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
         weight = 1;
 
         if (d > 0) {
-            weight = exp(3 - p);
+            weight = exp(4 - p);
         } else {
-            weight = exp(p - 3);
+            weight = exp(p - 2);
         }
 
         line_data[index] += d * weight / T;
@@ -769,9 +769,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
     weight = 1;
 
     if (d > 0) {
-        weight = exp(3 - p);
+        weight = exp(4 - p);
     } else {
-        weight = exp(p - 3);
+        weight = exp(p - 2);
     }
 
     line_data[index] += d * weight / T;
@@ -794,9 +794,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
     weight = 1;
 
     if (d > 0) {
-        weight = exp(3 - p);
+        weight = exp(4 - p);
     } else {
-        weight = exp(p - 3);
+        weight = exp(p - 2);
     }
 
     line_data[index] += d * weight / T;
@@ -819,9 +819,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
     weight = 1;
 
     if (d > 0) {
-        weight = exp(3 - p);
+        weight = exp(4 - p);
     } else {
-        weight = exp(p - 3);
+        weight = exp(p - 2);
     }
 
     line_data[index] += d * weight / T;
@@ -844,9 +844,9 @@ bool CEVALUATOR::improve_paramater(CSQUARES cs) {
     weight = 1;
 
     if (d > 0) {
-        weight = exp(3 - p);
+        weight = exp(4 - p);
     } else {
-        weight = exp(p - 3);
+        weight = exp(p - 2);
     }
 
     line_data[index] += d * weight / T;
