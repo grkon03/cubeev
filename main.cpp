@@ -255,6 +255,8 @@ int learn() {
             cout << "後手の勝利" << endl;
         }
 
+        cev.improve_paramater(cs);
+
         cout << endl;
         cout << "今ゲームの棋譜" << endl;
         for (int i = 0; i < 64; i++) {
