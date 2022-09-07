@@ -40,6 +40,8 @@ int main(int argc, char *argv[]) {
     } else {
         return main_usearg(argc - 1, argv);
     }
+    
+    int a
 
     return 0;
 }
